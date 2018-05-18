@@ -6,7 +6,7 @@ description=This is a plugin which adds a PDOK Locatieserver (dutch geocoder) to
 about=PDOK Locatieserver is a free Geocoder service provided by PDOK, The Netherlands.
     A Locator Filter implements the fetching of data from internal or external sources.
 
-    PDOK Locatieserver is both a suggest service as an info service
+    PDOK Locatieserver is both a suggest service and an info service
 
 version=0.2.0
 qgisMinimumVersion=3.0
@@ -26,7 +26,7 @@ changelog=
 category=Filter
 
 # experimental flag
-experimental=True
+experimental=False
 
 # change icon
 icon=icons/icon.svg
