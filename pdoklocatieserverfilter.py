@@ -40,7 +40,7 @@ class PDOKLocatieserverLocatorFilter(QgsLocatorFilter):
 
     USER_AGENT = b'Mozilla/5.0 QGIS PDOKLocatieserverLocatorFilter'
 
-    SEARCH_URL = 'https://geodata.nationaalgeoregister.nl/locatieserver/v3/suggest?q='
+    SEARCH_URL = 'https://api.pdok.nl/bzk/locatieserver/search/v3_1/suggest?q='
     # test url to be able to force errors
     #SEARCH_URL = 'http://duif.net/cgi-bin/qlocatorcheck.cgi?q='
 
@@ -113,7 +113,7 @@ class PDOKLocatieserverLocatorFilter(QgsLocatorFilter):
         self.info("UserClick: {}".format(result.displayString))
         # PDOK Location server return id's which have to picked up then
         id = result.userData['id']
-        url = 'https://geodata.nationaalgeoregister.nl/locatieserver/v3/lookup?id={}'.format(id)
+        url = 'https://api.pdok.nl/bzk/locatieserver/search/v3_1/lookup?id={}'.format(id)
         nam = NetworkAccessManager()
         try:
             (response, content) = nam.request(url)
